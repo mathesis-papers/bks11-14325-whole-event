@@ -1,9 +1,30 @@
-# Mathesis paper template
+# Modular recurrences and alternative proofs of Blitvić, Kammoun and Steingrímsson's 14325 packing congruences
 
-One repository for one exact Mathesis paper version. This template has no selected paper and no example books.
+**Authors:** Haobo Ma, Wenlin Zhang
 
-Authors can start from the [Mathesis LaTeX manuscript template](docs/layer-mathesis/MANUSCRIPT.md) for papers and short notes. Our own short notes use it as their default reference; sections and length follow the mathematical argument.
+Starting from Blitvić, Kammoun and Steingrímsson's Jacobi-fraction theorem (Part II, arXiv:2611.12829v1, Theorem 9.2, 9 November 2026), we extend their congruence observations in Part I (arXiv:2610.29846v1, Section 7, item 11, p. 49) to finite linear recurrences modulo every integer coprime to six. In particular, the prescribed 14325 packing count is one modulo thirty-five for an odd number of windows and six for an even number. An alternative proof of the original modulo-ten and four-divisibility laws uses Wallner's rank recurrence and Catalan numbers. For prescribed mixtures of overlaps one and two we give product congruences and characterize exactly when the comparison poset has a separator.
 
-The upstream books template supplies the machinery; the Mathesis layer supplies the publisher adapter and the [enforced four-zone layout](docs/layer-mathesis/LAYOUT.md).
+- PDF: [frozen public file](paper.pdf)
+- License: CC-BY-4.0
+- Version: 2
+- Mathesis record: [bks11-14325-whole-event](https://mathesis-omega-research.apps.chrono-ai.fun/papers/bks11-14325-whole-event?version=2)
 
-Use [the publisher pipeline](docs/layer-mathesis/PIPELINE.md) to import a public projection with `paper.py fill`. It creates the paper record, one bilingual content skeleton and a generated paper README. Upgrade with `tbook template update`; keep preparation run records outside the repository.
+## How to cite
+
+Haobo Ma, Wenlin Zhang (2026). Modular recurrences and alternative proofs of Blitvić, Kammoun and Steingrímsson's 14325 packing congruences. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/bks11-14325-whole-event?version=2
+
+## Statement progress
+
+| Statement | Formalization status | Source | Verification basis |
+|---|---|---|---|
+| Theorem (s1) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Theorem (s2) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Corollary (s3) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Corollary (s4) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Corollary (s5) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Corollary (s6) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+| Corollary (s7) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean) | No public receipt |
+
+## Contributions
+
+Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).

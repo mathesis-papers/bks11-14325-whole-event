@@ -1,0 +1,40 @@
+{
+  "generated_paths": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CONTRIBUTING.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "README.md",
+    "formalization/nodes.json",
+    "manuscript/README.md",
+    "manuscript/coverage.json",
+    "manuscript/metadata.json",
+    "manuscript/note.pdf",
+    "manuscript/note.tex",
+    "manuscript/verification.json",
+    "manuscript/verify.py",
+    "paper.json",
+    "paper.pdf",
+    "source.archive"
+  ],
+  "generator_version": "0.1.0",
+  "sha256": {
+    "CHANGELOG.md": "e510c35d4808268bf8e3e422d25163a0f6f3824ad03f05b9bd238e1b31a6d184",
+    "CITATION.cff": "a592e3e964a42a181b0518f1f5195b94ffbf0dd7d80db83c6230736aeb92c39a",
+    "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "README.md": "65574814b058fbbce27a1a809db59956678f4c6444b21c236cd40fc5e17e1244",
+    "formalization/nodes.json": "0fe795e719664b5434dd6d930db73681cab38da4017ad8ed1279c38b7dd002b3",
+    "manuscript/README.md": "77777823baf5cf4dfa686ac2d2fac35f9b49d4860e1712aebc1e7ad6a44c842c",
+    "manuscript/coverage.json": "4ab0529810e2b046a4bd2d99a4227a8b8f2909abbed925096b1da67628c8fb4b",
+    "manuscript/metadata.json": "358536ab36804b3ca1ed556dfcc36fcf766419d401269381851dc238c8c398ca",
+    "manuscript/note.pdf": "fd830090d49d1763968d7120c0c6e082af8df945f7a5336fcf9948f2679aa927",
+    "manuscript/note.tex": "2f231a0a65309c9f419764c47f66341787e93037de979ed46a870ed86f46af28",
+    "manuscript/verification.json": "2b2c1d71fbf1b27160a48450609e1475b35a77724e84fe0d26af6946f77b23a9",
+    "manuscript/verify.py": "fe70a550c0e67f326bf542e50499933942bf446dd0e0e034f89441f60b02908b",
+    "paper.json": "4a4aee12e15518cff68e38b0b80485d6c56d9707cb54b1806737c4b7760e170d",
+    "paper.pdf": "fd830090d49d1763968d7120c0c6e082af8df945f7a5336fcf9948f2679aa927",
+    "source.archive": "e40adac67531a8cb0cbffb04e8ffaddcfe9303aaba35550902a1ba2b93e5cb36"
+  },
+  "snapshot_identity": "5299ce84f529344bed07c2724c69bef45044f75ccba7e7b26bc11813e358e434"
+}

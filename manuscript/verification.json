@@ -1,0 +1,2945 @@
+{
+  "arithmetic": "exact integers and coefficient arithmetic modulo four",
+  "literal_permutations": {
+    "1": 1,
+    "2": 6
+  },
+  "comparison_poset_counts": [
+    {
+      "j": 1,
+      "count": 1,
+      "order_ideals": 6
+    },
+    {
+      "j": 2,
+      "count": 6,
+      "order_ideals": 13
+    },
+    {
+      "j": 3,
+      "count": 71,
+      "order_ideals": 28
+    },
+    {
+      "j": 4,
+      "count": 1266,
+      "order_ideals": 59
+    },
+    {
+      "j": 5,
+      "count": 30206,
+      "order_ideals": 122
+    },
+    {
+      "j": 6,
+      "count": 902796,
+      "order_ideals": 249
+    },
+    {
+      "j": 7,
+      "count": 32420011,
+      "order_ideals": 504
+    },
+    {
+      "j": 8,
+      "count": 1359292626,
+      "order_ideals": 1015
+    }
+  ],
+  "transfer_and_congruence_range": {
+    "first_j": 1,
+    "last_j": 256
+  },
+  "source_numerical_table": {
+    "first_j": 1,
+    "last_j": 16,
+    "matches": true
+  },
+  "period_five_profiles": {
+    "first_k": 0,
+    "last_k": 99,
+    "matches": true
+  },
+  "series": {
+    "degree_inclusive": 64,
+    "first_k": 0,
+    "last_k": 16,
+    "matches": true
+  },
+  "mixed_overlaps": {
+    "maximum_windows": 4,
+    "cases": [
+      {
+        "overlaps": [],
+        "count": 1
+      },
+      {
+        "overlaps": [
+          1
+        ],
+        "count": 1
+      },
+      {
+        "overlaps": [
+          2
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          1,
+          1
+        ],
+        "count": 1
+      },
+      {
+        "overlaps": [
+          1,
+          2
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          2,
+          1
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          2,
+          2
+        ],
+        "count": 71
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1
+        ],
+        "count": 1
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2
+        ],
+        "count": 71
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1
+        ],
+        "count": 6
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2
+        ],
+        "count": 36
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1
+        ],
+        "count": 71
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2
+        ],
+        "count": 1266
+      }
+    ],
+    "matches": true
+  },
+  "jacobi_fraction": {
+    "depth": 34,
+    "degree_inclusive": 64,
+    "modulus": 20,
+    "matches": true
+  },
+  "extended_congruences": {
+    "moduli": [
+      35,
+      140
+    ],
+    "first_j": 1,
+    "last_j": 256,
+    "modulo_140_first_j": 2,
+    "matches": true
+  },
+  "modular_models": {
+    "moduli": [
+      {
+        "modulus": 5,
+        "cutoff": 1,
+        "bound": 1
+      },
+      {
+        "modulus": 7,
+        "cutoff": 1,
+        "bound": 1
+      },
+      {
+        "modulus": 11,
+        "cutoff": 2,
+        "bound": 2
+      },
+      {
+        "modulus": 13,
+        "cutoff": 2,
+        "bound": 2
+      },
+      {
+        "modulus": 17,
+        "cutoff": 3,
+        "bound": 3
+      },
+      {
+        "modulus": 19,
+        "cutoff": 3,
+        "bound": 3
+      },
+      {
+        "modulus": 23,
+        "cutoff": 4,
+        "bound": 4
+      },
+      {
+        "modulus": 25,
+        "cutoff": 4,
+        "bound": 4
+      },
+      {
+        "modulus": 29,
+        "cutoff": 5,
+        "bound": 5
+      },
+      {
+        "modulus": 31,
+        "cutoff": 5,
+        "bound": 5
+      },
+      {
+        "modulus": 35,
+        "cutoff": 1,
+        "bound": 6
+      },
+      {
+        "modulus": 37,
+        "cutoff": 6,
+        "bound": 6
+      },
+      {
+        "modulus": 41,
+        "cutoff": 7,
+        "bound": 7
+      },
+      {
+        "modulus": 43,
+        "cutoff": 7,
+        "bound": 7
+      },
+      {
+        "modulus": 47,
+        "cutoff": 8,
+        "bound": 8
+      },
+      {
+        "modulus": 49,
+        "cutoff": 8,
+        "bound": 8
+      },
+      {
+        "modulus": 53,
+        "cutoff": 9,
+        "bound": 9
+      },
+      {
+        "modulus": 55,
+        "cutoff": 9,
+        "bound": 9
+      },
+      {
+        "modulus": 59,
+        "cutoff": 10,
+        "bound": 10
+      },
+      {
+        "modulus": 61,
+        "cutoff": 10,
+        "bound": 10
+      },
+      {
+        "modulus": 65,
+        "cutoff": 11,
+        "bound": 11
+      },
+      {
+        "modulus": 67,
+        "cutoff": 11,
+        "bound": 11
+      },
+      {
+        "modulus": 71,
+        "cutoff": 12,
+        "bound": 12
+      },
+      {
+        "modulus": 73,
+        "cutoff": 12,
+        "bound": 12
+      },
+      {
+        "modulus": 77,
+        "cutoff": 13,
+        "bound": 13
+      },
+      {
+        "modulus": 79,
+        "cutoff": 13,
+        "bound": 13
+      },
+      {
+        "modulus": 83,
+        "cutoff": 14,
+        "bound": 14
+      },
+      {
+        "modulus": 85,
+        "cutoff": 14,
+        "bound": 14
+      },
+      {
+        "modulus": 89,
+        "cutoff": 15,
+        "bound": 15
+      },
+      {
+        "modulus": 91,
+        "cutoff": 15,
+        "bound": 15
+      },
+      {
+        "modulus": 95,
+        "cutoff": 16,
+        "bound": 16
+      },
+      {
+        "modulus": 97,
+        "cutoff": 16,
+        "bound": 16
+      }
+    ],
+    "first_j": 1,
+    "last_j": 256,
+    "modulo_25_rational_series_degree_inclusive": 255,
+    "modulo_25_determinants": {
+      "numerator": [
+        1,
+        10,
+        15,
+        15
+      ],
+      "denominator": [
+        1,
+        4,
+        20,
+        20,
+        15
+      ]
+    },
+    "matches": true
+  },
+  "separators": {
+    "maximum_windows": 7,
+    "words_checked": 127,
+    "pure_overlap_two_maximum_windows": 16,
+    "cases": [
+      {
+        "overlaps": [],
+        "blocks": [
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1
+        ],
+        "blocks": [
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2
+        ],
+        "blocks": [
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2
+        ],
+        "blocks": [
+          3
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          4
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          4
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          3,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          3,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          4,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          5
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          12,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          4
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          3,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          4,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          5
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10,
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          4
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          3,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          3,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          3,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          4,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          4,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          10,
+          13,
+          16
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          5,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          6
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          16,
+          19,
+          22
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          1,
+          4
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          12,
+          15,
+          16,
+          17,
+          18,
+          19,
+          22
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          12,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          2,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          12,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          3,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          3,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          1,
+          4,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          1,
+          5
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          22
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14,
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          2,
+          4
+        ],
+        "separator_vertices_zero_based": [
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          3,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          11,
+          14,
+          15,
+          16,
+          17,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          3,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          3,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          1,
+          4,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          4,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          1,
+          5,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          1,
+          6
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          22
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14,
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          1,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          1,
+          4
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10,
+          11,
+          14,
+          15,
+          16,
+          17,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10,
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          2,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10,
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          2,
+          3,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          2,
+          3,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10,
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          2,
+          4,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          2,
+          5
+        ],
+        "separator_vertices_zero_based": [
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          3,
+          1,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          21
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          3,
+          1,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          17
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          3,
+          2,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          3,
+          2,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13,
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          3,
+          3,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          3,
+          4
+        ],
+        "separator_vertices_zero_based": [
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "blocks": [
+          4,
+          1,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "blocks": [
+          4,
+          1,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          20
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        "blocks": [
+          4,
+          2,
+          1
+        ],
+        "separator_vertices_zero_based": [
+          10,
+          13,
+          16
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "blocks": [
+          4,
+          3
+        ],
+        "separator_vertices_zero_based": [
+          10,
+          13,
+          16
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "blocks": [
+          5,
+          1,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "blocks": [
+          5,
+          2
+        ],
+        "separator_vertices_zero_based": [
+          13,
+          16,
+          19
+        ]
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "blocks": [
+          6,
+          1
+        ],
+        "separator_vertices_zero_based": []
+      },
+      {
+        "overlaps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "blocks": [
+          7
+        ],
+        "separator_vertices_zero_based": []
+      }
+    ],
+    "matches": true
+  },
+  "catalan_siblings": {
+    "cases": [
+      {
+        "pattern": "1324",
+        "overlap": 2,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "14253",
+        "overlap": 3,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "136245",
+        "overlap": 3,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "142536",
+        "overlap": 4,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "1376245",
+        "overlap": 3,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "369247815",
+        "overlap": 5,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      },
+      {
+        "pattern": "162738495",
+        "overlap": 7,
+        "counts_j_1_to_8": [
+          1,
+          2,
+          5,
+          14,
+          42,
+          132,
+          429,
+          1430
+        ]
+      }
+    ],
+    "matches": true
+  },
+  "equivalent_patterns": {
+    "cases": [
+      {
+        "pattern": "14325",
+        "overlap": 2,
+        "counts_j_1_to_8": [
+          1,
+          6,
+          71,
+          1266,
+          30206,
+          902796,
+          32420011,
+          1359292626
+        ]
+      },
+      {
+        "pattern": "52341",
+        "overlap": 2,
+        "counts_j_1_to_8": [
+          1,
+          6,
+          71,
+          1266,
+          30206,
+          902796,
+          32420011,
+          1359292626
+        ]
+      },
+      {
+        "pattern": "25314",
+        "overlap": 2,
+        "counts_j_1_to_8": [
+          1,
+          6,
+          71,
+          1266,
+          30206,
+          902796,
+          32420011,
+          1359292626
+        ]
+      },
+      {
+        "pattern": "41352",
+        "overlap": 2,
+        "counts_j_1_to_8": [
+          1,
+          6,
+          71,
+          1266,
+          30206,
+          902796,
+          32420011,
+          1359292626
+        ]
+      }
+    ],
+    "matches": true
+  },
+  "catalan_residue_classification": {
+    "first_j": 2,
+    "last_j": 256,
+    "possible_residues_modulo_4": [
+      0,
+      1,
+      2
+    ],
+    "matches": true
+  },
+  "script_sha256": "fe70a550c0e67f326bf542e50499933942bf446dd0e0e034f89441f60b02908b",
+  "status": "pass",
+  "scope": "Finite checks supplement the written proof for all positive j."
+}

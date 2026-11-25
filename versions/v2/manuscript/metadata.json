@@ -1,0 +1,23 @@
+{
+  "id": "bks11-14325-whole-event",
+  "revision": 2,
+  "problem_ids": [
+    "bks11-14325-whole-event"
+  ],
+  "topic": "Congruences, finite modular recurrences and separators for prescribed 14325 packings",
+  "title": "Modular recurrences and alternative proofs of Blitvić, Kammoun and Steingrímsson's 14325 packing congruences",
+  "creators": [
+    {
+      "name": "Ma, Haobo",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Zhang, Wenlin",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "Starting from Blitvić, Kammoun and Steingrímsson's Jacobi-fraction theorem (Part II, arXiv:2611.12829v1, Theorem 9.2, 9 November 2026), we extend their congruence observations in Part I (arXiv:2610.29846v1, Section 7, item 11, p. 49) to finite linear recurrences modulo every integer coprime to six. In particular, the prescribed 14325 packing count is one modulo thirty-five for an odd number of windows and six for an even number. An alternative proof of the original modulo-ten and four-divisibility laws uses Wallner's rank recurrence and Catalan numbers. For prescribed mixtures of overlaps one and two we give product congruences and characterize exactly when the comparison poset has a separator.",
+  "summary": "For every modulus m>=2 coprime to six, the prescribed 14325 packing count has a rational generating function modulo m, obtained from a finite Jacobi matrix cut off at the first r with m dividing 36r^2-1. Thus it satisfies an explicit recurrence of order at most r. For all j>=1, A_j is 1 modulo 35 when j is odd and 6 when j is even. For j>=2, A_j is 36*6^(j-1)+35*C_j modulo 140. The original modulo-ten and four-divisibility laws are reproved from the recurrence recorded by Michael Wallner in 2024. Mixed overlaps factor over maximal overlap-two blocks; their poset has a separator exactly when at least two blocks have at least two windows.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean"
+}

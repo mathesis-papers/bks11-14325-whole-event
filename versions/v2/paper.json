@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 99673,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "fd830090d49d1763968d7120c0c6e082af8df945f7a5336fcf9948f2679aa927",
+      "sha256": "fd830090d49d1763968d7120c0c6e082af8df945f7a5336fcf9948f2679aa927"
+    },
+    "source": {
+      "bytes": 121875,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "e40adac67531a8cb0cbffb04e8ffaddcfe9303aaba35550902a1ba2b93e5cb36",
+      "sha256": "e40adac67531a8cb0cbffb04e8ffaddcfe9303aaba35550902a1ba2b93e5cb36"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Starting from Blitvić, Kammoun and Steingrímsson's Jacobi-fraction theorem (Part II, arXiv:2611.12829v1, Theorem 9.2, 9 November 2026), we extend their congruence observations in Part I (arXiv:2610.29846v1, Section 7, item 11, p. 49) to finite linear recurrences modulo every integer coprime to six. In particular, the prescribed 14325 packing count is one modulo thirty-five for an odd number of windows and six for an even number. An alternative proof of the original modulo-ten and four-divisibility laws uses Wallner's rank recurrence and Catalan numbers. For prescribed mixtures of overlaps one and two we give product congruences and characterize exactly when the comparison poset has a separator.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "7b7707afe48bfe97846f5f4c44c709e53aec7178",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 99673,
+      "sha256": "fd830090d49d1763968d7120c0c6e082af8df945f7a5336fcf9948f2679aa927",
+      "url": "/api/v1/collected-papers/bks11-14325-whole-event/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-25T17:47:05.337404162Z",
+    "record": "bks11-14325-whole-event",
+    "repository_name": "bks11-14325-whole-event",
+    "source": {
+      "bytes": 121875,
+      "sha256": "e40adac67531a8cb0cbffb04e8ffaddcfe9303aaba35550902a1ba2b93e5cb36",
+      "url": "/api/v1/collected-papers/bks11-14325-whole-event/files/source?version=2"
+    },
+    "title": "Modular recurrences and alternative proofs of Blitvić, Kammoun and Steingrímsson's 14325 packing congruences",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-25T17:47:05.337404162Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "bks11-14325-whole-event"
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "id": "bks11-14325-whole-event",
+  "revision": 2,
+  "problem_ids": [
+    "bks11-14325-whole-event"
+  ],
+  "posing_source": {
+    "url": "https://arxiv.org/abs/2610.29846v1",
+    "locator": "Section 7, item 11, page 49; enumeration defined in Definition 2.6 and Remark 2.7",
+    "authors": [
+      "Natasha Blitvić",
+      "Mohammed Slim Kammoun",
+      "Einar Steingrímsson"
+    ]
+  },
+  "prior_work": [
+    {
+      "authors": [
+        "Emeric Deutsch",
+        "Bruce E. Sagan"
+      ],
+      "date": "2006",
+      "url": "https://doi.org/10.1016/j.jnt.2005.06.005",
+      "locator": "Theorem 2.1",
+      "scope": "The classical Catalan valuation v_2(C_j)=s_2(j+1)-1."
+    },
+    {
+      "authors": [
+        "Sen-Peng Eu",
+        "Shu-Chung Liu",
+        "Yeong-Nan Yeh"
+      ],
+      "date": "2007-08-20",
+      "url": "https://doi.org/10.1016/j.ejc.2007.06.019",
+      "locator": "Theorem 2.3, p.1452",
+      "scope": "Catalan residues modulo four are 1,2,0 according as s_2(j+1) is 1,2,>=3"
+    },
+    {
+      "authors": [
+        "Ran Pan"
+      ],
+      "date": "2016-06-28",
+      "url": "https://mathweb.ucsd.edu/~projectp/problems/solutions/OneLevelGridPoset.pdf",
+      "locator": "Pages 2-3",
+      "scope": "Recursive enumeration of the same one-level grid sequence, recorded as OEIS A274644."
+    },
+    {
+      "authors": [
+        "Natasha Blitvić",
+        "Mohammed Slim Kammoun",
+        "Einar Steingrímsson"
+      ],
+      "date": "2023",
+      "url": "https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2023/61.pdf",
+      "locator": "Proposition 5, p.9; Table 1, p.11",
+      "scope": "Mixed-overlap product and the identification of 14325 and 25314 with A274644"
+    },
+    {
+      "authors": [
+        "Michael Wallner"
+      ],
+      "date": "2024-02-13",
+      "url": "https://oeis.org/A274644",
+      "locator": "FORMULA field, dated contribution",
+      "scope": "Exact recurrence F_0(k)=1, F_(n+1)(k)=sum(r*F_n(r+2),r=1,...,k), at k>=3"
+    },
+    {
+      "authors": [
+        "Natasha Blitvić",
+        "Mohammed Slim Kammoun",
+        "Einar Steingrímsson"
+      ],
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12829v1",
+      "locator": "Theorem 9.2 and Lemma 9.3, PDF pages 36-37",
+      "scope": "Jacobi fraction with alpha_n=12n+6 and beta_n=36n^2-1; its reductions modulo four and five imply both observations."
+    }
+  ],
+  "verification": {
+    "written_proof": "All positive window counts: original modular laws, finite modular models for every modulus coprime to six, modulo-35 and modulo-140 laws, the modulo-25 rational series, mixed-block product and congruences, exact separator criterion, and Catalan sibling valuations.",
+    "finite_checks": {
+      "literal_permutations_j": [
+        1,
+        2
+      ],
+      "comparison_poset_j": [
+        1,
+        8
+      ],
+      "transfer_and_congruence_j": [
+        1,
+        256
+      ],
+      "period_five_k": [
+        0,
+        99
+      ],
+      "series_degree_inclusive": 64,
+      "series_k": [
+        0,
+        16
+      ],
+      "mixed_overlap_maximum_windows": 4,
+      "mixed_overlap_words": 15,
+      "jacobi_fraction_depth": 34,
+      "jacobi_fraction_degree_inclusive": 64,
+      "jacobi_fraction_modulus": 20,
+      "arithmetic": "Exact integers and modular coefficient arithmetic.",
+      "modular_models": "All m in [2,100] with gcd(m,6)=1; j=1,...,256",
+      "modulo_35_range": "j=1,...,256",
+      "modulo_140_range": "j=2,...,256",
+      "modulo_25_series_degree_inclusive": 255,
+      "separator_words_maximum_windows": 7,
+      "separator_words_checked": 127,
+      "pure_overlap_two_separator_maximum_windows": 16,
+      "catalan_sibling_pairs": 7,
+      "catalan_sibling_window_range": [
+        1,
+        8
+      ],
+      "equivalent_pattern_count": 4,
+      "equivalent_pattern_window_range": [
+        1,
+        8
+      ]
+    },
+    "lean_source": {
+      "revision": "7b7707afe48bfe97846f5f4c44c709e53aec7178",
+      "core_url": "https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean",
+      "core_namespace": "D5.S3.Combinatorics.Permutation.BlitvicKammounSteingrimsson14325Core",
+      "declarations": [
+        {
+          "name": "count_mod_ten",
+          "statement": "Universal modulo-ten law for the literal packing count."
+        },
+        {
+          "name": "count_mod_four_iff",
+          "statement": "Universal equivalence characterizing the exact exceptions to four-divisibility."
+        },
+        {
+          "name": "packingGridEquiv",
+          "statement": "Bijection between actual packings and grid rank assignments for j>=1."
+        },
+        {
+          "name": "grid_card_eq_row",
+          "statement": "The grid cardinality equals row Nat (j-1) 3 for j>=1."
+        }
+      ],
+      "transfer_url": "https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Transfer.lean",
+      "transfer_declaration": "D5.S3.Combinatorics.Permutation.BlitvicKammounSteingrimsson14325Transfer.row_catalan_mod_four",
+      "transfer_statement": "For n>=0, row Nat (n+1) 3 is congruent to 3*C_(n+2) modulo four.",
+      "exact_signatures": [
+        {
+          "file": "Core",
+          "name": "count_mod_ten",
+          "line": 794,
+          "hypotheses": "j : Nat, 1 <= j",
+          "conclusion": "count pattern 2 j % 10 = if exists k : Nat, 1<=k and j+1=2^k then 1 else 6"
+        },
+        {
+          "file": "Core",
+          "name": "count_mod_four_iff",
+          "line": 802,
+          "hypotheses": "j : Nat, 1 <= j",
+          "conclusion": "(not 4 divides count pattern 2 j) iff exists i p : Nat, p<=i and j+1=2^i+2^p"
+        },
+        {
+          "file": "Core",
+          "name": "packingGridEquiv",
+          "line": 369,
+          "hypotheses": "j : Nat, 1 <= j",
+          "conclusion": "Equivalence between the literal packing type and GridPacking j"
+        },
+        {
+          "file": "Core",
+          "name": "grid_card_eq_row",
+          "line": 781,
+          "hypotheses": "j : Nat, 1 <= j",
+          "conclusion": "Nat.card (GridPacking j) = row Nat (j-1) 3"
+        },
+        {
+          "file": "Transfer",
+          "name": "row_mod_five",
+          "line": 97,
+          "hypotheses": "n : Nat",
+          "conclusion": "row (ZMod 5) n 3 = 1"
+        },
+        {
+          "file": "Transfer",
+          "name": "row_catalan_mod_four",
+          "line": 275,
+          "hypotheses": "n : Nat",
+          "conclusion": "(row Nat (n+1) 3 : ZMod 4) = 3 * (catalan (n+2) : ZMod 4)"
+        }
+      ],
+      "written_extensions": [
+        "finite modular matrix and recurrence theorem",
+        "modulo-35 and modulo-140 laws",
+        "modulo-25 rational function",
+        "mixed-overlap factorization and modular laws",
+        "separator classification",
+        "seven literal Catalan-family valuation statements",
+        "equivalence of four literal pattern counts"
+      ]
+    }
+  },
+  "build": {
+    "tex_engine": "Tectonic 0.17.0 or a standard pdflatex distribution",
+    "bibliography": "Embedded in note.tex",
+    "checker": "Python 3.10 or later, standard library only"
+  },
+  "source_items": [
+    {
+      "source_item": "Part I, Section 7, item 11, modulo-ten observation, p.49",
+      "source_quote": "all the numbers are congruent to 6 mod 10",
+      "status": "Reproved; prior proof implied by Blitvić, Kammoun and Steingrímsson (2026), Part II, Theorem 9.2",
+      "range": "j>=1",
+      "note_locator": "Theorem 1, equation (2)"
+    },
+    {
+      "source_item": "Part I, Section 7, item 11, four-divisibility observation, p.49",
+      "source_quote": "4 seems to divide all but those",
+      "status": "Reproved; prior Jacobi theorem and Deutsch–Sagan (2006), Theorem 2.1",
+      "range": "j>=1; equal exponents and exponent zero included",
+      "note_locator": "Theorem 1, equation (3)"
+    },
+    {
+      "source_item": "Part I, Definition 2.6 and Remark 2.7",
+      "status": "Exact prescribed-window enumeration, additional occurrences allowed"
+    },
+    {
+      "source_item": "Part I, Proposition 6.1, p.46; Section 7, item 2, p.47",
+      "status": "Prior product formula reproved for 14325; modular consequences proved",
+      "note_locator": "Corollary 4",
+      "not_covered": "Classification of all varying-overlap patterns"
+    },
+    {
+      "source_item": "Part I, Section 7, item 5, p.47",
+      "status": "Not posed for this pattern; obstruction proved: no separator for pure overlap two; exact criterion for mixed overlaps one/two",
+      "note_locator": "Corollary 5",
+      "not_covered": "General separator classification and other pattern examples"
+    },
+    {
+      "source_item": "Part I, Section 7, item 3, p.47",
+      "status": "Known grid recurrence reproved; general search for new gap-vector classes not covered"
+    },
+    {
+      "source_item": "Part I, Section 7, item 6, pp.47–48, seven listed Catalan pairs",
+      "status": "Prior Catalan enumeration cited; valuation and divisibility corollary proved",
+      "note_locator": "Corollary 6",
+      "not_covered": "Shifted-factorial classes and general operations explaining Wilf equivalence"
+    },
+    {
+      "source_item": "Part I, Section 7, items 1,4,7,8,9,10, pp.47–49",
+      "status": "Not covered",
+      "details": "General poset characterization, maxima, Wilf classes, finite cutoff bounds, power sequences and other polynomial-factor enumerations"
+    },
+    {
+      "source_item": "OEIS A274644, revision 32; Wallner recurrence dated 2024-02-13",
+      "status": "Prior recurrence reproved with index shift b(j,k)=F_(j-1)(k) for k>=3",
+      "note_locator": "Section 2, equations (7) and (8)"
+    },
+    {
+      "source_item": "OEIS A000108",
+      "status": "Prior Catalan valuation cited and reproved"
+    },
+    {
+      "source_item": "OEIS A274763",
+      "status": "Not covered; grid family with horizontal subdivision differs"
+    },
+    {
+      "source_item": "Part II, Theorem 9.2, equation (9.9), p.36, proof pp.37–40",
+      "status": "Prior proof cited and used for all-modulus deductions"
+    },
+    {
+      "source_item": "Finite modular recurrences; modulo-35, modulo-140, modulo-25 formulas",
+      "status": "Not posed in the source; proved",
+      "note_locator": "Theorem 2; Corollary 3; equation (18)"
+    },
+    {
+      "source_item": "Part I, Table 1, p.11 and Section 3; 2023 Table 1, p.11",
+      "status": "Prior equivalence reproved; congruences transferred to 14325,52341,25314,41352",
+      "note_locator": "Corollary 7",
+      "not_covered": "Mixed-overlap factorization for 25314"
+    },
+    {
+      "source_item": "Eu–Liu–Yeh, Theorem 2.3, journal p.1452",
+      "status": "Prior Catalan residue classification cited and reproved; impossible residue three omitted",
+      "note_locator": "Section 5, exact modulo-twenty law"
+    }
+  ]
+}

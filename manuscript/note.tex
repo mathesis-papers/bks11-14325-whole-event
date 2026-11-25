@@ -1,0 +1,577 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\coef}[2]{[z^{#1}]#2}
+\title{Modular recurrences and alternative proofs of\\
+Blitvi\'c, Kammoun and Steingr\'imsson's\\$14325$ packing congruences}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{19 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Starting from Blitvi\'c, Kammoun and Steingr\'imsson's Jacobi-fraction
+theorem (Part~II, arXiv:2611.12829v1, Theorem~9.2, 9 November 2026),
+we extend their congruence observations in Part~I (arXiv:2610.29846v1,
+Section~7, item~11, p.~49) to finite linear recurrences modulo every
+integer coprime to six.
+In particular, the prescribed $14325$ packing count is one modulo
+thirty-five for an odd number of windows and six for an even number.
+An alternative proof of the original modulo-ten and four-divisibility
+laws uses Wallner's rank recurrence and Catalan numbers.
+For prescribed mixtures of overlaps one and two we give product
+congruences and characterize exactly when the comparison poset has
+a separator.
+\end{abstract}
+
+\section{The enumeration and the congruences}
+For $j\geq1$, let $A_j$ count the permutations $w$ of
+$\{1,\ldots,3j+2\}$ for which each window
+\[
+ (w_{3t+1},w_{3t+2},w_{3t+3},w_{3t+4},w_{3t+5}),
+ \qquad 0\leq t<j,
+\]
+has relative order $14325$. These are precisely the $(2,j)$-packings
+of Definition~2.6 of Blitvi\'c, Kammoun and Steingr\'imsson~\cite{BKS}.
+Additional occurrences are allowed, as in their Remark~2.7.
+Their Section~7, item~11 records two numerical observations about $A_j$,
+the first through at least $j=23$. Their later Jacobi-fraction
+theorem~\cite[Theorem~9.2]{BKSII} already implies both congruence
+laws. We derive from it a finite modular model for every modulus
+coprime to six (Theorem~\ref{thm:modular}), including explicit laws
+modulo thirty-five and one hundred forty. We also give a self-contained
+proof of the original laws from the recurrence recorded by Wallner
+in 2024~\cite{OEIS}, and determine the separators for mixed overlaps.
+
+Write $C_j=\binom{2j}{j}/(j+1)$ for the Catalan numbers, and let $s_2(n)$
+be the number of ones in the binary expansion of $n$.
+\begin{theorem}\label{thm:main}
+We have $A_1=1$. For every $j\geq1$, $A_j\equiv1\pmod5$; for $j\geq2$,
+\begin{equation}\label{eq:cat}
+ A_j\equiv3C_j\pmod4.
+\end{equation}
+Consequently, for every $j\geq1$,
+\begin{align}
+ A_j&\equiv
+ \begin{cases}1&j+1=2^k\text{ for some }k\geq1,\\
+ 6&\text{otherwise}\end{cases}\pmod {10},\label{eq:ten}\\
+ 4\nmid A_j&\quad\Longleftrightarrow\quad
+ j+1=2^i+2^p\text{ for some }0\leq p\leq i.\label{eq:four}
+\end{align}
+Equal exponents and exponent zero are included in~\eqref{eq:four}.
+\end{theorem}
+
+The underlying grid sequence was already enumerated by Pan~\cite{Pan},
+page~3, in 2016 and is OEIS A274644~\cite{OEIS}. Pan's recursive algorithm on page~2
+and the packing-poset framework in Sections~2.3 and~4.2 of~\cite{BKS}
+give the enumerative setting. Wallner's formula in that entry, dated
+13 February 2024, is exactly~\eqref{eq:transfer}--\eqref{eq:A} after
+an index shift. We prove its rank-insertion interpretation before
+analyzing the two moduli. The Catalan digit-sum criterion
+is classical: Deutsch and Sagan~\cite[Theorem~2.1]{DS} give a
+combinatorial proof. We include an arithmetic proof of that auxiliary
+criterion below; the assertions about $A_j$ require the grid congruence.
+
+\section{A rank-insertion recurrence}
+The insertion below is also the reversible insertion in
+\cite[Lemma~9.3, equation~(9.11)]{BKSII}: its state $q$ corresponds
+to $k=q+2$ here. We count continuations from a state, rather than
+extensions arriving in that state.
+Use zero-based positions, and put $a_t=w_{3t}$, $b_t=w_{3t+1}$,
+$c_t=w_{3t+2}$. The window condition is exactly
+\begin{equation}\label{eq:chain}
+ a_t<a_{t+1}<c_t<b_t<b_{t+1}\qquad(0\leq t<j).
+\end{equation}
+Both $a_0$ and $b_j$ are comparable with every entry: the $a_t$ increase,
+the $b_t$ increase, and every $c_t$ lies between the adjacent entries
+in~\eqref{eq:chain}. Thus $a_0$ is the least entry and $b_j$ the greatest.
+Delete these two forced entries and standardize to ranks $0,\ldots,3j-1$.
+The remaining entries, indexed by
+\[
+ x_t=a_{t+1},\qquad y_t=c_t,\qquad z_t=b_t\qquad(0\leq t<j),
+\]
+satisfy precisely
+\begin{equation}\label{eq:grid}
+ x_t<y_t<z_t,\qquad x_t<x_{t+1},\qquad z_t<z_{t+1}.
+\end{equation}
+Conversely, these inequalities, with a new least $a_0$ and greatest
+$b_j$, recover every comparison in~\eqref{eq:chain}, including the
+first and last windows. Hence $A_j$ is the number of rank assignments
+to~\eqref{eq:grid}; there is no multiplicative factor.
+
+For a grid of $j$ columns let $N=3j$, let $h$ be the rank of $x_{j-1}$,
+and define its state to be $k=N-h$. Append a new column by inserting
+$z_j$ as the greatest rank, then inserting $y_j$ at rank $b$ and $x_j$
+at rank $a$, where
+\begin{equation}\label{eq:insert}
+ h<a\leq b\leq N.
+\end{equation}
+Here inserting a rank shifts every existing rank at least that large
+up by one. The new ranks of $x_j,y_j,z_j$ are $a,b+1,N+2$.
+These inequalities give exactly~\eqref{eq:grid} for the new column.
+Conversely $z_j$ must be the greatest entry in any grid, since all
+columns lie below their own $z_t$ and the $z_t$ increase.
+Deleting the last column and standardizing therefore reverses this
+construction uniquely.
+
+Set $r=N-a+1$. Then $1\leq r\leq k$, the number of choices for $b$
+is $r$, and the new state is $N+3-a=r+2$.
+For $n,k\geq0$ define
+\begin{equation}\label{eq:transfer}
+ F_0(k)=1,\qquad F_{n+1}(k)=\sum_{r=1}^{k}rF_n(r+2).
+\end{equation}
+For every actual state $k$, induction on $n$ shows that $F_n(k)$ is
+the number of extensions by $n$ columns. There is one single-column
+grid, with state three. Consequently
+\begin{equation}\label{eq:A}
+ A_j=F_{j-1}(3)\qquad(j\geq1).
+\end{equation}
+Values of $F_n$ at auxiliary arguments below three are fixed
+algebraically by~\eqref{eq:transfer}.
+
+\section{Reduction modulo five}
+Let $Tf(k)=\sum_{r=1}^k rf(r+2)$, and regard functions as taking values
+in $\Z/5\Z$. Define the period-five functions $P,Q$ by
+\[
+\begin{array}{c|rrrrr}
+ k\bmod5&0&1&2&3&4\\\hline
+ P(k)&0&1&3&1&0\\
+ Q(k)&0&1&1&1&0
+\end{array}
+\]
+Then $T1=P$, $TP=Q$, and $TQ=Q$. To check these identities for all
+$k$, use $Tf(0)=0$ and
+$Tf(k+1)-Tf(k)=(k+1)f(k+3)$.
+The differences of $P$ are $(1,2,3,4,0)$; those of $Q$ are
+$(1,0,0,4,0)$, which agree with both $(k+1)P(k+3)$ and
+$(k+1)Q(k+3)$. Induction on $k$ proves the three identities.
+Thus $F_0(3)=1$, $F_1(3)=P(3)=1$, and $F_n(3)=Q(3)=1$ for $n\geq2$,
+proving $A_j\equiv1\pmod5$.
+
+\section{Reduction modulo four}
+All equalities in this section are in $R=\Z/4\Z$ or $R[[z]]$.
+First, for all $n,q\geq0$,
+\begin{equation}\label{eq:neighbor}
+ 2F_n(2q+2)=2F_n(2q+1).
+\end{equation}
+For $n=0$ this is immediate; for $n\geq1$ subtract the two sums
+in~\eqref{eq:transfer} to obtain
+$(2q+2)F_{n-1}(2q+4)$, whose double vanishes in $R$.
+In particular,
+\[
+ (2q+2)F_n(2q+4)=-(2q+2)F_n(2q+3).
+\]
+Writing $G_n(k)=F_n(2k+1)$, this pairs the even-weight terms in the
+transfer sum with the preceding odd-weight terms, giving
+\begin{equation}\label{eq:odd}
+ G_{n+1}(k)=(2k+1)G_n(k+1)-\sum_{r=1}^kG_n(r).
+\end{equation}
+Indeed each pair with weights $2r-1,2r$ contributes
+$-F_n(2r+1)=-G_n(r)$; the unpaired last weight is $2k+1$.
+
+Let $C=\sum_{j\geq0}C_jz^j$, so $C=1+zC^2$, and set
+\[
+ V=3C^2-2,\qquad U=1+zV.
+\]
+Squaring $C=1+zC^2$ gives $C^2=1+2zC^2+z^2C^4$.
+Substitution, with $4=0$ in $R$, gives
+\begin{equation}\label{eq:V}
+ V+2zV+z^2V^2=1.
+\end{equation}
+For completeness, the left side minus one simplifies to
+$3C^2+2zC^2+z^2C^4+1$, which is zero by the preceding identity.
+Therefore
+\begin{equation}\label{eq:UV}
+ U=(1+2z)V+zUV,\qquad V=UV-zV^2.
+\end{equation}
+Define
+\[
+ H_{2m}=UV^m,\qquad H_{2m+1}=V^{m+1}\qquad(m\geq0).
+\]
+Their constant coefficients are all one, $H_0=1+zH_1$, and
+\begin{equation}\label{eq:adjacent}
+ H_k=(1+(2k+2)z)H_{k+1}-(2k+3)zH_{k+2}.
+\end{equation}
+For even $k$, this is the first identity in~\eqref{eq:UV} multiplied
+by $V^{k/2}$; for odd $k$, it is the second multiplied by
+$V^{(k-1)/2}$. Beginning with $k=0$ and using~\eqref{eq:adjacent}
+inductively yields
+\begin{equation}\label{eq:H}
+ H_k=1+z\left((2k+1)H_{k+1}-\sum_{r=1}^kH_r\right).
+\end{equation}
+Explicitly, rearrange~\eqref{eq:adjacent} to solve for
+$(1+(2k+2)z)H_{k+1}$, and substitute~\eqref{eq:H} for $H_k$;
+the resulting identity is~\eqref{eq:H} with $k+1$ in place of $k$.
+Comparison of coefficients, inducting on degree simultaneously for
+all $k$, now identifies
+\[
+ H_k=\sum_{n\geq0}G_n(k)z^n.
+\]
+In particular $H_1=V=3C^2-2$, so for $j\geq2$,
+\[
+ A_j=\coef{j-1}{V}=3\coef{j-1}{C^2}=3C_j\quad\text{in }R.
+\]
+This proves~\eqref{eq:cat}. The constant coefficient of $V$ is one,
+which accounts separately for $A_1=1$.
+
+\section{Binary exceptions and the prior Jacobi fraction}
+Let $v_2(m)$ denote the exponent of two in a positive integer $m$.
+Counting multiples of each power of two in $m!$ gives
+$v_2(m!)=\sum_{r\geq1}\lfloor m/2^r\rfloor=m-s_2(m)$.
+Hence
+\[
+ v_2(C_j)=s_2(j)-v_2(j+1)=s_2(j+1)-1.
+\]
+The last identity follows because adding one changes the trailing
+$v_2(j+1)$ binary ones of $j$ to zeros and introduces one new one.
+Thus $C_j$ is odd exactly when $j+1$ is a power of two.
+Together with $A_j\equiv1\pmod5$ and~\eqref{eq:cat}, this proves
+\eqref{eq:ten}, including $j=1$ directly.
+Similarly, $4\nmid C_j$ exactly when $s_2(j+1)\leq2$.
+For $j+1\geq2$, an integer with two binary ones is a sum of two
+distinct powers of two, while one with one binary one is
+$2^i+2^i$ for some $i\geq0$. The converses are immediate, proving
+\eqref{eq:four}; $j=1$ corresponds to $i=p=0$.
+
+The exact Catalan residue, due to Eu, Liu and Yeh~\cite[Theorem~2.3]{ELY},
+is $1,2,0$ modulo four according as $s_2(j+1)$ is one, two, or
+at least three. The valuation proves the last two cases. For the
+first, write $j=2^k-1$. Pairing terms in the Catalan recurrence gives
+\[
+ C_{2q+1}=C_q^2+2\sum_{i=0}^{q-1}C_iC_{2q-i},\qquad
+ q=2^{k-1}-1.
+\]
+A product in this sum could be odd only if
+$i+1=2^a$ and $2q-i+1=2^b$, forcing
+$2^a+2^b=2^k$ and hence $i=q$. Thus every paired term is even,
+and $C_j\equiv C_q^2\equiv1\pmod4$. The case $k=1$ is immediate.
+There is no Catalan residue three. Consequently, for $j\geq2$,
+\[
+ A_j\equiv\begin{cases}
+ 11&s_2(j+1)=1,\\
+ 6&s_2(j+1)=2,\\
+ 16&s_2(j+1)\geq3
+ \end{cases}\pmod{20}.
+\]
+This uses the Chinese remainder theorem for moduli four and five;
+$A_1=1$ is the separate initial term.
+
+\paragraph{Consequences of the prior enumeration.}
+Theorem~9.2 of~\cite{BKSII}, with the packing interpretation
+in its Lemma~9.3, gives
+\[
+ \mathcal A(z)=\sum_{j\geq1}A_jz^{j-1}
+ =\cfrac{1}{1-6z-\cfrac{35z^2}{1-18z-\cfrac{143z^2}{1-30z-\ddots}}},
+\]
+with Jacobi coefficients $\alpha_n=12n+6$ for $n\geq0$ and
+$\beta_n=36n^2-1$ for $n\geq1$. Modulo five, $\beta_1=0$ and $\alpha_0=1$,
+so $\mathcal A=(1-z)^{-1}$. Modulo four every $\alpha_n=2$
+and every $\beta_n=3$, so all tails coincide and
+$\mathcal A=1+2z\mathcal A+3z^2\mathcal A^2$.
+This equation has a unique constant-one solution, by induction on
+degree. Equation~\eqref{eq:V} identifies it as $3C^2-2$.
+Thus the prior Jacobi fraction gives another proof of both
+congruences in Theorem~\ref{thm:main}. Reduction of the formal
+continued fraction is valid coefficient by coefficient: its finite
+truncations stabilize in each degree and all denominators have
+constant term one.
+
+\section{Finite modular models}
+The vanishing of a Jacobi down-step gives more than the modulo-five
+law. Set $a_n=A_{n+1}$ for $n\geq0$.
+\begin{theorem}\label{thm:modular}
+Let $m\geq2$ with $\gcd(m,6)=1$, and let
+\[
+ r=\min\{s\geq1:m\mid 36s^2-1\}.
+\]
+This integer exists, with $r\leq(m-1)/6$ when $m\equiv1\pmod6$ and
+$r\leq(m+1)/6$ when $m\equiv5\pmod6$.
+Let $J_r$ be the $r$ by $r$ matrix, indexed from zero, with
+\[
+ (J_r)_{h,h}=12h+6,\quad (J_r)_{h,h+1}=1,\quad
+ (J_r)_{h,h-1}=36h^2-1,
+\]
+where entries outside the matrix are omitted and all other entries
+are zero. Over $\Z/m\Z$,
+\begin{equation}\label{eq:finite}
+ \sum_{n\geq0}a_nz^n
+ =e_0^{\mathsf T}(I-zJ_r)^{-1}e_0
+ =\frac{\det\bigl((I-zJ_r)_{\widehat0,\widehat0}\bigr)}{\det(I-zJ_r)}.
+\end{equation}
+The numerator deletes row and column zero; the empty determinant is one. If
+$D(z)=\det(I-zJ_r)=1+d_1z+\cdots+d_rz^r$, then
+\begin{equation}\label{eq:modrec}
+ a_n+d_1a_{n-1}+\cdots+d_ra_{n-r}=0\pmod m
+ \qquad(n\geq r).
+\end{equation}
+\end{theorem}
+\begin{proof}
+The indicated choices $s=(m-1)/6$ or $(m+1)/6$ satisfy
+$6s\equiv-1$ or $1\pmod m$, proving existence and the bound.
+The Jacobi fraction counts weighted Motzkin excursions: an up-step
+has weight one, a level-step at height $h$ has weight $12h+6$, and
+a down-step from height $h$ has weight $36h^2-1$.
+For completeness, the generating function for excursions above height
+$h$ is $(1-(12h+6)z-(36(h+1)^2-1)z^2T_{h+1})^{-1}$, by the
+first-return decomposition. This is the Jacobi fraction term by term.
+Any excursion reaching height $r$ must return through a down-step
+of weight $36r^2-1$, so its contribution is zero modulo $m$.
+The remaining excursions stay in $0,\ldots,r-1$ and are counted by
+$(J_r^n)_{0,0}$. Their geometric matrix series and the adjugate formula
+give~\eqref{eq:finite}. The denominator has constant term one and
+degree at most $r$, and its cofactor has degree at most $r-1$.
+Multiplying the series by $D$ proves~\eqref{eq:modrec}, including
+the possible vanishing of its last coefficient.
+\end{proof}
+
+\begin{corollary}\label{cor:35}
+For all $j\geq1$,
+\[
+ A_j\equiv6^{j-1}\equiv
+ \begin{cases}1&j\text{ odd},\\6&j\text{ even}\end{cases}\pmod{35}.
+\]
+For $j\geq2$, this strengthens the modulo-twenty consequence to
+\begin{equation}\label{eq:140}
+ A_j\equiv36\cdot6^{j-1}+35C_j\pmod{140}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+For $m=35$, the first down-weight is $\beta_1=35=0$, so $r=1$ and
+$\sum a_nz^n=(1-6z)^{-1}$. Since $6^2\equiv1\pmod{35}$, the
+parity formula follows. The right side of~\eqref{eq:140} is
+$6^{j-1}$ modulo $35$ and $3C_j$ modulo four; apply the Chinese
+remainder theorem and~\eqref{eq:cat}.
+\end{proof}
+
+For example, $r=4$ for $m=25$, and the finite model is
+\begin{equation}\label{eq:25}
+ \sum_{n\geq0}a_nz^n=
+ \frac{1+10z+15z^2+15z^3}{1+4z+20z^2+20z^3+15z^4}\pmod{25}.
+\end{equation}
+This follows by expanding the two determinants in~\eqref{eq:finite};
+the successive down-weights are $35,143,323,575$, the last divisible
+by $25$. Thus the displayed coefficients give a four-term modular
+recurrence, rather than a finite-prefix extrapolation.
+
+\section{Mixed overlaps and separators}
+\begin{corollary}\label{cor:mixed}
+For a nonempty sequence of prescribed $14325$ windows with successive
+overlaps one or two, let $j_1,\ldots,j_a$ be the numbers of windows
+in its maximal blocks joined by overlaps two. Its count $B$ satisfies
+\[
+ B=\prod_{\ell=1}^a A_{j_\ell},\qquad
+ B\equiv6^{\sum_\ell(j_\ell-1)}\pmod{35}.
+\]
+Moreover $B\equiv1\pmod5$, and
+\[
+ B\equiv\begin{cases}
+ 1&\text{every }j_\ell+1\text{ is a power of two},\\
+ 6&\text{otherwise}
+ \end{cases}\pmod {10},\qquad
+ 4\nmid B\ \Longleftrightarrow\
+ \sum_{\ell=1}^a\bigl(s_2(j_\ell+1)-1\bigr)\leq1.
+\]
+\end{corollary}
+\begin{proof}
+The product formula was proved in \cite[Proposition~5, p.~9]{BKS23}
+and restated in \cite[Proposition~6.1]{BKS}. Partition a sequence of prescribed
+$14325$ windows into its maximal blocks joined by overlaps of size two;
+let their numbers of windows be $j_1,\ldots,j_a$, all positive.
+Successive blocks overlap in one position. That shared position is
+the greatest entry in the left block and the least in the right block,
+by~\eqref{eq:chain}. It separates every entry on its left from every
+entry on its right. Thus the sets of ranks in the blocks are forced,
+and their internal orders can be chosen independently. The count is
+$B=\prod_{\ell=1}^a A_{j_\ell}$, the specialization of that proposition.
+The residues follow from Theorem~\ref{thm:main} and
+Corollary~\ref{cor:35}. For the final equivalence,~\eqref{eq:cat} implies
+$\min(2,v_2(A_j))=\min(2,s_2(j+1)-1)$ for $j\geq2$,
+and this also holds for $j=1$. Add valuations over the product.
+\end{proof}
+
+In Part~I, Section~7, item~5, a separator is a vertex comparable with
+every vertex whose deletion leaves a lower and an upper subposet,
+neither a chain. The following gives an exact answer within the
+mixed-overlap family; it is not a characterization of all patterns.
+\begin{corollary}\label{cor:separator}
+A prescribed $14325$ packing poset with overlaps one or two has a
+separator if and only if at least two of its maximal overlap-two
+blocks contain at least two windows. In particular, a pure
+overlap-two packing has no separator, for every $j\geq1$.
+\end{corollary}
+\begin{proof}
+In the grid~\eqref{eq:grid}, for $j\geq2$, the only vertices
+comparable with all others are its least vertex $x_0$ and greatest
+vertex $z_{j-1}$. Indeed $x_i$ is incomparable with $y_{i-1}$ for
+$i\geq1$, $y_i$ with $x_{i+1}$ for $i<j-1$, $y_{j-1}$ with
+$z_{j-2}$, and $z_i$ with $y_{i+1}$ for $i<j-1$.
+These incomparabilities follow directly from the directed relations:
+no relation enters an $x$ from a $y$ or $z$, no relation leaves a $z$
+for a $y$, and the $x$ and $z$ chains only increase their indices.
+Restoring the removed least and greatest entries adds only an
+initial and a terminal chain. Thus no vertex splits a single block
+into two nonchains. A one-window block is itself a chain.
+The preceding product proof expresses a mixed packing as these
+blocks joined in order at their extreme vertices. If two blocks
+are nonchains, a shared endpoint between them is comparable with
+all vertices and has a nonchain on either side, hence is a separator.
+If there is at most one nonchain block, a vertex in a joining chain
+leaves at least one side a chain. A universal vertex within the
+unique nonchain block lies on its initial or terminal chain, so
+again at least one side is a chain. This proves both directions.
+\end{proof}
+
+\begin{corollary}\label{cor:catalan}
+For each pattern--overlap pair
+\[
+ (1324,2),\ (14253,3),\ (136245,3),\ (142536,4),
+\]
+\[
+ (1376245,3),\ (369247815,5),\ (162738495,7),
+\]
+the packing count has two-adic valuation $s_2(j+1)-1$ for $j\geq1$.
+Thus it is odd exactly when $j+1$ is a power of two, and fails to be
+divisible by four exactly when $j+1$ is a sum of two powers of two,
+allowing equal exponents.
+\end{corollary}
+\begin{proof}
+Part~I, Section~7, item~6 identifies these Catalan classes by posets
+that differ by initial and terminal chains. Their counts are $C_j$,
+so the displayed Catalan valuation proves the assertion. This is a
+consequence of the cited enumeration, not an additional Wilf equivalence.
+\end{proof}
+
+\begin{corollary}\label{cor:equivalent}
+For every $j\geq1$, the overlap-two counts for the four patterns
+$14325$, $52341$, $25314$ and $41352$ are equal. Each therefore
+satisfies all the single-block congruences and finite modular
+recurrences above.
+\end{corollary}
+\begin{proof}
+The equivalence of $14325$ and $25314$ is recorded in
+\cite[Table~1, p.~11]{BKS23} and \cite[Section~3]{BKS}.
+An explicit bijection follows from their inequalities.
+For $25314$ they are
+\[
+ a_{t+1}<a_t<c_t<b_{t+1}<b_t\qquad(0\leq t<j).
+\]
+Relabel positions by $a'_s=a_{j-s}$, $b'_s=b_{j-s}$ and
+$c'_s=c_{j-1-s}$. The inequalities become
+$a'_s<a'_{s+1}<c'_s<b'_s<b'_{s+1}$, exactly~\eqref{eq:chain}.
+This position relabelling is invertible. Complementing every
+permutation value exchanges $14325$ with $52341$ and $25314$ with
+$41352$, preserving prescribed starts. The statement concerns
+overlap two; it does not assert the mixed-overlap product for $25314$.
+\end{proof}
+
+\section{Source coverage and verification}
+
+{\small
+\begin{longtable}{p{.40\linewidth}p{.50\linewidth}}
+\toprule
+Source item (Part I unless indicated)&Coverage\\\midrule
+\endhead
+Section 7, item 11, first observation&Reproved; prior proof implied by Blitvi\'c, Kammoun and Steingr\'imsson (2026), Theorem 9.2. Equation~\eqref{eq:ten} holds for all $j\geq1$.\\
+Section 7, item 11, second observation&Reproved; same prior theorem and Deutsch--Sagan (2006). Equation~\eqref{eq:four} includes zero and equal exponents.\\
+Definition 2.6 and Remark 2.7&The enumeration agrees exactly, with additional occurrences allowed.\\
+Proposition 6.1; Section 7, item 2&Prior product formula reproved for $14325$; Corollary~\ref{cor:mixed} adds modular consequences. The general varying-overlap question is not covered.\\
+Section 7, item 5 (separators)&Not posed for this pattern; obstruction proved: no separator for $14325$ at overlap two. Corollary~\ref{cor:separator} characterizes mixed overlaps; the general classification is not covered.\\
+Section 7, item 3 (gap enumeration)&The known grid specialization is~\eqref{eq:transfer}; the search for other classes is not covered.\\
+Section 7, item 6 (Catalan classes)&Prior Catalan enumeration cited there; Corollary~\ref{cor:catalan} gives the resulting valuations. The general operations question and shifted-factorial classes are not covered.\\
+Section 7, items 1, 4, 7--10&Not covered: general poset restrictions, maxima, Wilf classification, cutoff bounds and other product sequences.\\
+OEIS A274644; cross-references A000108 and A274763&Wallner's 2024 recurrence is reproved; A000108 supplies the Catalan comparison. A274763 is a different grid family, not covered.\\
+Part II, Theorem 9.2&Prior proof cited and used. Theorem~\ref{thm:modular} and Corollary~\ref{cor:35} are deductions, not a new enumeration.\\
+Part I, Table 1 and Section 3; the 2023 Table 1&Prior equivalence reproved in Corollary~\ref{cor:equivalent}; the single-block modular consequences apply to all four patterns.\\
+Moduli coprime to six; modulo 140&Not posed in item 11; proved in Theorem~\ref{thm:modular} and~\eqref{eq:140}.\\
+\bottomrule
+\end{longtable}
+}
+
+\paragraph{Verification scope.}
+The argument above is a written proof for every $j\geq1$.
+The accompanying \texttt{verify.py} independently counts the literal
+permutations for $j=1,2$ and their comparison-poset linear extensions
+for $1\leq j\leq8$, checks the exact transfer counts and congruences
+through $j=256$, and checks the power-series identities through
+degree~64. It also checks all prescribed overlap words of sizes one
+and two with at most four windows and the Jacobi fraction modulo
+twenty through degree~64. Further exact checks compare the modular
+matrices for every $2\leq m\leq100$ coprime to six through $j=256$,
+the modulo-thirty-five law for $1\leq j\leq256$ and the
+modulo-one-hundred-forty law for $2\leq j\leq256$,
+\eqref{eq:25} through degree~255, and the separator criterion
+for all overlap words with at most seven windows.
+The seven listed Catalan classes and the four equivalent patterns
+are also checked by comparison-poset enumeration through eight windows.
+These finite checks supplement the universal proofs.
+In the pinned Lean files~\cite{Core,Transfer}, the declarations
+\texttt{count\_mod\_ten} and \texttt{count\_mod\_four\_iff} state
+\eqref{eq:ten} and~\eqref{eq:four} for the literal packing predicate;
+\texttt{packingGridEquiv} and \texttt{grid\_card\_eq\_row} give the
+enumerative correspondence. The declaration
+\texttt{row\_catalan\_mod\_four} in~\cite{Transfer} states the
+positive-index transfer-row congruence used in~\eqref{eq:cat}.
+In that same file, \texttt{row\_mod\_five} states the all-index
+modulo-five transfer congruence. The finite modular model,
+modulo-thirty-five and modulo-one-hundred-forty laws, mixed-overlap
+formulas and separator criterion are written proofs.
+
+\begin{thebibliography}{6}
+\bibitem{BKS}
+N.~Blitvi\'c, M.~S.~Kammoun and E.~Steingr\'imsson,
+\emph{Permutations, Pattern Covers, Posets and Positivity:
+Part I: Patterns and Posets}, arXiv:2610.29846v1 (2026),
+Definition~2.6, Remark~2.7 and Section~7, item~11, p.~49.
+\href{https://arxiv.org/abs/2610.29846v1}{arXiv:2610.29846v1}.
+\bibitem{BKSII}
+N.~Blitvi\'c, M.~S.~Kammoun and E.~Steingr\'imsson,
+\emph{Permutations, Pattern Covers, Posets and Positivity, Part II:
+Regular Pattern Packings and Moment Sequences},
+arXiv:2611.12829v1 (2026), Theorem~9.2 and Lemma~9.3.
+\href{https://arxiv.org/abs/2611.12829v1}{arXiv:2611.12829v1}.
+\bibitem{DS}
+E.~Deutsch and B.~E.~Sagan,
+Congruences for Catalan and Motzkin numbers and related sequences,
+\emph{J. Number Theory} \textbf{117} (2006), 191--215.
+\href{https://doi.org/10.1016/j.jnt.2005.06.005}{doi:10.1016/j.jnt.2005.06.005};
+\href{https://arxiv.org/abs/math/0407326}{arXiv:math/0407326}.
+\bibitem{ELY}
+S.-P.~Eu, S.-C.~Liu and Y.-N.~Yeh,
+Catalan and Motzkin numbers modulo 4 and 8,
+\emph{European J. Combin.} \textbf{29} (2008), 1449--1466;
+available online 20 August 2007.
+\href{https://doi.org/10.1016/j.ejc.2007.06.019}{doi:10.1016/j.ejc.2007.06.019}.
+\bibitem{BKS23}
+N.~Blitvi\'c, M.~S.~Kammoun and E.~Steingr\'imsson,
+A new perspective on positivity in (consecutive) permutation patterns,
+\emph{S\'em. Lothar. Combin.} \textbf{89B} (2023), Article~61, 12~pp.
+\href{https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2023/61.pdf}{Available text}.
+\bibitem{Pan}
+R.~Pan, \emph{Algorithmic Solution to Problem 1
+(and linear extensions of general one-level grid-like posets)},
+Project P, posted 28 June 2016, pp.~2--3.
+\href{https://mathweb.ucsd.edu/~projectp/problems/solutions/OneLevelGridPoset.pdf}{Available text}.
+\bibitem{OEIS}
+The OEIS Foundation Inc., \emph{The On-Line Encyclopedia of Integer Sequences},
+\href{https://oeis.org/A274644}{A274644}, revision 32, 24 October 2026;
+recurrence contributed by M.~Wallner, 13 February 2024.
+\bibitem{Core}
+\emph{BlitvicKammounSteingrimsson14325Core.lean},
+\newline revision \texttt{7b7707afe48bfe97846f5f4c44c709e53aec7178}.
+\href{https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Core.lean}{Pinned Lean declarations}.
+\bibitem{Transfer}
+\emph{BlitvicKammounSteingrimsson14325Transfer.lean}, same revision.
+\href{https://github.com/the-omega-institute/trureturing/blob/7b7707afe48bfe97846f5f4c44c709e53aec7178/D5/S3/Combinatorics/Permutation/BlitvicKammounSteingrimsson14325Transfer.lean}{Pinned Lean declarations}.
+\end{thebibliography}
+\noindent\small Licensed under Creative Commons Attribution 4.0 International
+(CC BY 4.0).
+\end{document}
